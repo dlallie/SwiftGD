@@ -11,7 +11,7 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-        .systemLibrary(name: "gd", pkgConfig: "gdlib", providers: [.apt(["libgd-dev"]), .yum(["gd"]), .brew(["gd"])]),
+        .systemLibrary(name: "gd", pkgConfig: "gdlib", providers: [.apt(["libgd-dev"]), .yum(["php-gd"]), .brew(["gd"])]),
         .target(name: "SwiftGD", dependencies: ["gd"]),
         .testTarget(name: "SwiftGDTests", dependencies: ["SwiftGD"])
     ]
