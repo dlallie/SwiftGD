@@ -1,4 +1,4 @@
-// swift-tools-version:5.2
+// swift-tools-version:5.3
 import PackageDescription
 
 let package = Package(
@@ -11,7 +11,7 @@ let package = Package(
     ],
     dependencies: [],
     targets: [
-        .systemLibrary(name: "gd", pkgConfig: "gdlib", providers: [.apt(["libgd-dev"]), .yum(["gd-devel"]), .brew(["gd"])]),
+        .systemLibrary(name: "gd", pkgConfig: "gdlib", providers: [.apt(["libgd-dev"]), .brew(["gd"])]),
         .target(name: "SwiftGD", dependencies: ["gd"]),
         .testTarget(name: "SwiftGDTests", dependencies: ["SwiftGD"])
     ]
